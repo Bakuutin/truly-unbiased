@@ -1,0 +1,11 @@
+*
+
+!*.py
+!*.ipynb
+!*.md
+!.gitignore
+!LICENSE
+
+
+*.local
+*.local.*
