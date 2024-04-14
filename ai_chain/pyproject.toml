@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ai_chain"
+version = "0.1.0"
+description = ""
+authors = ["fanli"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+uvicorn = "^0.23.2"
+langserve = {extras = ["server"], version = ">=0.0.30"}
+pydantic = "<2"
+unbias = {path = "packages/unbias", develop = true}
+langchainhub = "^0.1.15"
+langchain-anthropic = "^0.1.8"
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

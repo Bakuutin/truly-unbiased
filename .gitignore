@@ -1,13 +1,6 @@
-*
-
-!*.py
-!*.ipynb
-!*.md
-!*.png
-!.gitignore
-!LICENSE
-!public
-
-
-*.local
-*.local.*
+# Ignore .env files
+**/.env
+.env.*
+.DS_Store
+*.pyc
+ai_chain/.env
