@@ -13,6 +13,18 @@ The goal of this project is to generate truly unbiased large language models by 
 ![Diagram](public/TrulyUnbiased.png)
 
 
+We are creating a dataset that is free of bias to fine-tune LLMs on. 
+
+The input is a regular biased dataset with real world data.
+
+Each single piece of text is processed separately. For example: `...his mother is shy, but his brother is not...`.
+
+We extract the personas from the text: `he`, `mother`, `brother`, and then assign randomised genders to break away from stereotypical associations. We use actual pseudo randomness to get a desired distribution of attributes in the dataset.
+
+For example, new random genders can be `male, male, female`, then we reconstruc the original text changing the genders `...his father is shy, but his sister is not...`
+
+After processing each item in the dataset, we have a new dataset with much less bias for the attributes we processed. We fine-tune the LLMs using this syntetic data, we call it intersectional finetuning.
+
 ## Limitations
 
 There are several limitations and points to consider, the main one is that the idea of simulating an equitable world involves subjective decisions about what is considered equitable, often influenced by current societal norms and values which are themselves subject to debate and change. We should mitigate the risks of a single group imposing their own norms and biases.
