@@ -3,8 +3,10 @@
 !*.py
 !*.ipynb
 !*.md
+!*.png
 !.gitignore
 !LICENSE
+!public
 
 
 *.local
